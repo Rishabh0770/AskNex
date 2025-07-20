@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chat - AskNex</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <h1>AskNex</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="chat.html" class="active">Chat</a></li>
+      </ul>
+    </nav>
+    <button id="themeToggle">🌙</button>
+  </header> 
+
+  <main>
+  <section class="chat-section">
+    <h2 class="section-title">Chat with AskNex</h2>
+    <div class="chat-box" id="chatBox">
+      <div class="chat-message ai">👾 Hello! I'm AskNex, your AI assistant. Ask me anything!</div>
+    </div>
+
+    <form id="chatForm">
+      <input type="text" id="userInput" placeholder="Type your message..." required />
+      <button type="submit">Send</button>
+    </form>
+  </section>
+</main>
+  <footer>
+    <p>© 2025 AskNex. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

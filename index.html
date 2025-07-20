@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AskNex - AI Chatbot powered by Gemini API. Get instant answers.">
+  <meta name="keywords" content="AskNex, Chatbot, Gemini AI, OpenAI, Google API, Ask Questions, Voice Bot">
+  <meta name="author" content="Rishav Kumar">
+  <title>AskNex - Next Gen AI Chat</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+<header class="navbar">
+    <h1>AskNex</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="features.html">Features</a></li>
+      <li><a href="chat.html">Chat</a></li>
+    </ul>
+  </nav>
+<button id="themeToggle" aria-label="Toggle theme">🌙</button>
+</header>
+
+<main>
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Meet <span>AskNex</span></h1>
+      <p>Your next-gen AI assistant, built for speed, smartness, and style.</p>
+      <button class="cta" id="startChatBtn">Start Chatting</button>
+
+    </div>
+  </section>
+
+  <!-- FEATURES SECTION -->
+  <section class="features" id="features">
+    <h2 class="section-title">Why AskNex?</h2>
+    <div class="feature-grid">
+      <div class="card animate">🧠 <h3>Smart Replies</h3><p>Instant, intelligent answers to any question.</p></div>
+      <div class="card animate">🎙️ <h3>Voice Input</h3><p>Talk instead of typing — it's fast and natural.</p></div>
+      <div class="card animate">🌐 <h3>Multilingual</h3><p>Supports multiple languages for global access.</p></div>
+      <div class="card animate">⚡ <h3>Prompt Tips</h3><p>Get suggested prompts to start your conversation.</p></div>
+    </div>
+  </section>
+
+<section class="chat-section" id="chat">
+  <h2 class="section-title">Try AskNex</h2>
+  <div class="chat-box animate" id="chatBox">
+    <div class="chat-message ai">👾 Hello! I'm AskNex. How can I assist you today?</div>
+    <div class="chat-message user">🙋‍♂️ What's the weather in Delhi?</div>
+    <div class="chat-message ai">👾 It's currently 34°C and sunny in Delhi.</div>
+  </div>
+  <form id="chatForm" class="chat-input-area">
+    <input type="text" id="userInput" placeholder="Type your message..." required />
+    <button type="submit">Send</button>
+  </form>
+</section>
+</main>
+
+  <footer>
+    <p>© 2025 AskNex. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
