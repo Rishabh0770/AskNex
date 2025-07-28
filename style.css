@@ -327,46 +327,112 @@ body.light-mode .chat-message.ai {
 
 @media (max-width: 480px) {
   /* Navbar layout stays row-wise */
+@media (max-width: 480px) {
   .navbar {
-    padding: 1rem;
     flex-direction: row;
-    align-items: center;
+    flex-wrap: nowrap; /* ✅ Prevent breaking into multiple rows */
     justify-content: space-between;
-    flex-wrap: wrap; /* allows items to break lines on small screens */
-    gap: 1rem;
+    align-items: center;
+    padding: 0.6rem 1rem;
+    gap: 0;
   }
 
-  .navbar h1,
-  .navbar img {
-    flex: 1 1 auto;
-    font-size: 1.4rem;
-    text-align: center;
-
-  }
-
-  .navbar nav {
-    flex: 2 1 100%;
+  .navbar-left,
+  .navbar-center,
+  .navbar-right {
+    flex: 1;
     display: flex;
+    align-items: center;
     justify-content: center;
-    order: 2; /* place nav links below logo */
   }
 
-  .navbar ul {
+  .navbar-left {
+    justify-content: flex-start;  /* 🔹 Logo on left */
+  }
+
+  .navbar-center {
+    justify-content: center;      /* 🔹 Nav in center */
+  }
+
+  .navbar-right {
+    justify-content: flex-end;    /* 🔹 Toggle on right */
+  }
+
+  .navbar-center ul {
+    display: flex;
     flex-direction: row;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
+    gap: 0.7rem;
     padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .navbar-center ul li a {
+    font-size: 0.85rem;
+    white-space: nowrap; /* 🚫 Prevents breaking lines */
   }
 
   #themeToggle {
-    flex-direction: row;
-    display: flex;
-    justify-content: center;
-    order: 2; /* places the theme toggle at the bottom right */
     font-size: 1.2rem;
+    padding: 0.2rem;
+    background: none;
+    border: none;
   }
-  /* Hero section mobile */
+}
+
+ @media (max-width: 480px) {
+  .navbar {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.6rem 1rem;
+    gap: 0;
+  }
+
+  .navbar-left,
+  .navbar-center,
+  .navbar-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navbar-left {
+    justify-content: flex-start;
+  }
+
+  .navbar-center {
+    justify-content: center;
+  }
+
+  .navbar-right {
+    justify-content: flex-end;
+  }
+
+  .navbar-center ul {
+    display: flex;
+    flex-direction: row;
+    gap: 0.7rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .navbar-center ul li a {
+    font-size: 0.85rem;
+    white-space: nowrap;
+  }
+
+  #themeToggle {
+    font-size: 1.2rem;
+    padding: 0.2rem;
+    background: none;
+    border: none;
+  }
+
+  /* --- Rest of your 480px styles --- */
   .hero {
     padding: 2.5rem 1rem;
     flex-direction: column;
@@ -386,7 +452,6 @@ body.light-mode .chat-message.ai {
     font-size: 0.95rem;
   }
 
-  /* Section padding */
   section {
     padding: 60px 16px;
   }
@@ -396,7 +461,6 @@ body.light-mode .chat-message.ai {
     margin-bottom: 30px;
   }
 
-  /* Feature Cards */
   .features {
     padding: 1rem;
   }
@@ -409,7 +473,6 @@ body.light-mode .chat-message.ai {
     font-size: 1.2rem;
   }
 
-  /* Chat Section */
   .chat-section {
     padding: 1.5rem 1rem;
   }
@@ -425,7 +488,6 @@ body.light-mode .chat-message.ai {
     border-radius: 12px;
   }
 
-  /* Chat form already responsive, just tighten */
   #chatForm {
     gap: 0.8rem;
   }
@@ -436,14 +498,13 @@ body.light-mode .chat-message.ai {
     padding: 0.6rem 1rem;
   }
 
-  /* Footer */
   footer {
     font-size: 0.8rem;
     padding: 0.8rem;
   }
 
-  /* Adjust any animation delay for smoother UX on mobile */
   .animate {
     transition: all 0.5s ease-out;
   }
 }
+
