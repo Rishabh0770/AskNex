@@ -119,6 +119,65 @@ a {
   }
 }
 
+/* Base nav list layout */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* List items as inline blocks */
+ul li {
+  display: inline-block;
+}
+
+/* Anchor styles */
+ul li a {
+  position: relative;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+/* Light mode link color */
+body.light-mode ul li a {
+  color: #222;
+}
+
+/* Dark mode link color */
+body.dark-mode ul li a {
+  color: #eee;
+}
+
+/* Hover background and color (both themes) */
+ul li a:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Hover underline animation */
+ul li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background-color: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+ul li a:hover::after {
+  transform: scaleX(1);
+}
+
 
 /* HERO SECTION */
 .hero {
@@ -140,6 +199,10 @@ a {
   margin-top: 1rem;
   color: #ccc;
 }
+body.light-mode .hero-content p {
+  color: #000; /* black in light mode */
+}
+
 .cta {
   margin-top: 2rem;
   padding: 0.8rem 2rem;
@@ -192,6 +255,17 @@ section {
   box-shadow: 0 4px 20px rgba(0, 255, 200, 0.2);
 
 }
+/* Light Mode Card Style */
+body.light-mode .card {
+  background: rgba(0, 0, 0, 0.05); /* subtle dark glass effect */
+  color: #000; /* black text */
+}
+
+body.light-mode .card:hover {
+  background-color: rgba(0, 123, 255, 0.1); /* bluish glow */
+  box-shadow: 0 4px 20px rgba(0, 123, 255, 0.2);
+}
+
 .card h3 {
   margin-top: 0.5rem;
   color: #0ef6cc;
@@ -432,6 +506,16 @@ body.light-mode .chat-message.ai {
     border: none;
   }
 
+/* === LIGHT MODE STYLING === */
+body.light-mode .navbar ul li a {
+  color: #000; /* Set text color to black in light mode */
+}
+
+/* === DARK MODE STYLING (OPTIONAL) === */
+body.dark-mode .navbar ul li a {
+  color: #fff;
+}
+
   /* --- Rest of your 480px styles --- */
   .hero {
     padding: 2.5rem 1rem;
@@ -507,4 +591,4 @@ body.light-mode .chat-message.ai {
     transition: all 0.5s ease-out;
   }
 }
-
+}
