@@ -22,7 +22,7 @@ a {
   color: inherit;
 }
 
-/* NAVBAR */
+/* NAVBAR CONTAINER */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -33,17 +33,20 @@ a {
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1)
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* Wrap everything inside the navbar */
-.navbar > * {
+/* Divide space evenly between 3 parts */
+.navbar-left,
+.navbar-center,
+.navbar-right {
   flex: 1;
+  display: flex;
+  align-items: center;
 }
 
-/* Style for logo or h1 */
-.navbar img,
-.navbar h1 {
+/* Logo on the left */
+.navbar-left h1 {
   font-size: 1.8rem;
   background: linear-gradient(to right, #0ef6cc, #9c6fff);
   -webkit-background-clip: text;
@@ -52,34 +55,68 @@ a {
 }
 
 /* Center nav links */
-.navbar nav {
-  display: flex;
+.navbar-center {
   justify-content: center;
 }
 
-.navbar ul {
+.navbar-center ul {
   list-style: none;
   display: flex;
-  justify-content: center;
   gap: 2rem;
   padding: 0;
   margin: 0;
 }
 
-/* Hover effect */
-.navbar ul li a:hover {
+.navbar-center ul li a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.navbar-center ul li a:hover {
   color: #0ef6cc;
 }
 
-/* Theme toggle stays right */
+/* Right theme toggle */
+.navbar-right {
+  justify-content: flex-end;
+}
+
 #themeToggle {
   background: none;
   border: none;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   cursor: pointer;
   color: #fff;
-  display: flex;
-  justify-content: flex-end;
+  transition: transform 0.2s ease;
+}
+
+#themeToggle:hover {
+  transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: row;         /* ✅ KEEP ROW LAYOUT */
+    align-items: center;
+    padding: 0.8rem 1rem;        /* Slightly tighter padding */
+  }
+
+  .navbar-left h1 {
+    font-size: 1.4rem;           /* Slightly smaller logo */
+  }
+
+  .navbar-center ul {
+    gap: 1rem;                   /* Reduce spacing between nav links */
+  }
+
+  .navbar-center ul li a {
+    font-size: 0.9rem;
+  }
+
+  #themeToggle {
+    font-size: 1.2rem;
+  }
 }
 
 

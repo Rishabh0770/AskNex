@@ -7,17 +7,25 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="navbar">
-        <a href="index.html"><h1>AskNex</h1></a>
+<header class="navbar">
+  <div class="navbar-left">
+    <a href="index.html"><h1>AskNex</h1></a>
+  </div>
+
+  <div class="navbar-center">
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="features.html">Features</a></li>
-        <li><a href="chat.html" class="active">Chat</a></li>
+        <li><a href="chat.html">Chat</a></li>
       </ul>
     </nav>
-    <button id="themeToggle">🌙</button>
-  </header> 
+  </div>
+
+  <div class="navbar-right">
+    <button id="themeToggle" aria-label="Toggle theme">🌙</button>
+  </div>
+</header>
 
   <main>
   <section class="chat-section">
